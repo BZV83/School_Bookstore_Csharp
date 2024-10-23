@@ -34,6 +34,12 @@ pipeline {
         }
       }
     }
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts artifacts: 'publish/**', fingerprint: true
+      }
+    }
   }
 
   post {
