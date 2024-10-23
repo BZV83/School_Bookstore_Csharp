@@ -37,7 +37,7 @@ pipeline {
 
     stage('Archive') {
       steps {
-        archiveArtifacts artifacts: '/var/jenkins_home/workspace/Test/bin/Release/net8.0/publish/**', fingerprint: true
+        archiveArtifacts artifacts: 'bin/Release/net8.0/publish/**', fingerprint: true
       }
     }
   }
