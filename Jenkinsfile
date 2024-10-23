@@ -15,7 +15,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          sh 'dotnet build --configuration Release'
+          bat 'msbuild Bookstore_Mission_11_Vick.sln /p:Configuration=Release'
         }
       }
     }
@@ -23,7 +23,7 @@ pipeline {
     stage('Publish') {
       steps {
         script {
-          sh 'dotnet publish -c Release'
+          bat 'msbuild Bookstore_Mission_11_Vick.csproj /p:Configuration=Release'
         }
       }
     }
