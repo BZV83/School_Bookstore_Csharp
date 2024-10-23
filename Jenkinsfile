@@ -19,13 +19,13 @@ pipeline {
       }
     }
 
-    // stage('Build') {
-    //   steps {
-    //     script {
-    //       bat 'msbuild Bookstore_Mission_11_Vick.sln /p:Configuration=Release'
-    //     }
-    //   }
-    // }
+    stage('Build') {
+      steps {
+        script {
+          bat 'msbuild Bookstore_Mission_11_Vick.sln /p:Configuration=Release'
+        }
+      }
+    }
 
     // stage('Publish') {
     //   steps {
