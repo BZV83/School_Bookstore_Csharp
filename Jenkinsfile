@@ -2,6 +2,13 @@ pipeline {
   agent any
   
   stages {
+
+        stage('Checkout') {
+      steps {
+        git 'https://github.com/BZV83/School_Bookstore_Csharp.git'
+      }
+    }
+    
     stage('Potato') {
       steps {
         script {
@@ -10,11 +17,6 @@ pipeline {
           '''
         }
       }
-    // stage('Checkout') {
-    //   steps {
-    //     git 'https://github.com/BZV83/School_Bookstore_Csharp.git'
-    //   }
-    // }
 
     // stage('Build') {
     //   steps {
