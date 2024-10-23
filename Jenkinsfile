@@ -27,13 +27,13 @@ pipeline {
       }
     }
 
-    // stage('Publish') {
-    //   steps {
-    //     script {
-    //       bat 'msbuild Bookstore_Mission_11_Vick.csproj /p:Configuration=Release'
-    //     }
-    //   }
-    // }
+    stage('Publish') {
+      steps {
+        script {
+          sh 'dotnet publish Bookstore_Mission_11_Vick.csproj -c Release'
+        }
+      }
+    }
   }
 
   post {
