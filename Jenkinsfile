@@ -22,7 +22,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          sh 'msbuild Bookstore_Mission_11_Vick.sln /p:Configuration=Release'
+          sh 'dotnet build Bookstore_Mission_11_Vick.sln -c Release'
         }
       }
     }
