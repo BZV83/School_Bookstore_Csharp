@@ -3,7 +3,7 @@ pipeline {
   
   stages {
 
-        stage('Checkout') {
+    stage('Checkout') {
       steps {
         git 'https://github.com/BZV83/School_Bookstore_Csharp.git'
       }
@@ -17,6 +17,7 @@ pipeline {
           '''
         }
       }
+    }
 
     // stage('Build') {
     //   steps {
